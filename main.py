@@ -26,17 +26,15 @@ st.subheader(
 )
 
 area = st.slider("qual a área do imóvel", min_value=area_min, max_value=area_max, value=media_area)   
-print(type(area))
 
 garagem_options = [1, 2, 3]
 garagem = st.radio("qual o número de garagens", options=garagem_options)
-print(type(garagem))
+
 
 bairro = st.text_input("informe seu bairro")
-print(bairro)
 
 ano = st.slider("qual o ano de construção do imóvel", min_value=ano_min, max_value=ano_max, value=media_ano)   
-print(type(ano))
+
 
 st.sidebar.title("Coloque suas informações")
 name_user = st.sidebar.text_input("Digite seu nome")
