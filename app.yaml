@@ -1,0 +1,26 @@
+# Uma instância é uma máquina virtual (VM, na sigla em inglês) hospedada na infraestrutura do Google
+
+# As instâncias são a base do App Engine e incluem todos os recursos necessários para hospedar o aplicativo com êxito.
+# Em qualquer momento, o aplicativo pode estar em execução em uma ou várias instâncias,
+# com solicitações espalhadas por todas elas
+
+# O App Engine é compatível com os seguintes tipos de escalonamento, que controlam como e quando as instâncias são criadas:
+
+# Automático
+  # O escalonamento automático cria instâncias baseadas na taxa de solicitação
+  
+# Básico
+  # O escalonamento básico cria instâncias quando seu aplicativo recebe solicitações
+
+# Manual
+  # O escalonamento manual especifica o número de instâncias que são executadas continuamente,
+  # seja qual for o nível de carga
+
+# Você especifica o tipo de escalonamento no app.yaml do app.
+service: default
+runtime: custom
+env: flex
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 5
